@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import axios from 'axios';
-
+import '../Styles/Web.css';
 function View(){
     const [views, setViews] = useState({});
     useEffect(() => {
@@ -10,6 +10,9 @@ function View(){
         console.log(res.data);
         setViews(res.data);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return(
@@ -19,9 +22,9 @@ function View(){
 const Views = (props) => {
 
         return (
-          <div className="card">
-            <p>{props.title}</p>
-            <p>{props.body}</p>
+          <div className="view">
+            <p>Title : {props.title}</p>
+            <p>Content : {props.body}</p>
           </div>
         );
 };
