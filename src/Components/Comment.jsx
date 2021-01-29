@@ -10,6 +10,9 @@ function Comment(){
         console.log(res.data);
         setComments(res.data);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return(
@@ -21,9 +24,11 @@ const Comments = (props) => {
         <>
           {props.comments.map((comment) => {
             return (
-              <div className="card">
+              <div className="comment">
+              <div className="card p-3">
                 <p>{comment.title}</p>
                 <p>{comment.body}</p>
+              </div>
               </div>
             );
           })}
