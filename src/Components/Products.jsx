@@ -1,4 +1,5 @@
-import './Styles/Web.css';
+import '../Styles/Web.css';
+import Pic1 from './images/pic1.jpg';
 function Products(){
     return(
         
@@ -8,10 +9,17 @@ function Products(){
     
             </div>
             <div className="col-1">
-                <button className="center">
-                    << </button>
+                
             </div>
             <div className="col-2">
+            <div class="card" style="width:250px">
+                <img class="card-img-top" src={pic1} alt="Card image" style={width:"250px"}>
+                <div class="card-body">
+                    <p class="card-title">Herbal Life formula</p>
+                    <p class="card-text">₹2000.00</p>
+                    <button className="bu">Buy Now</button>
+                </div>
+            </div>
                 <img className="pic1" src="./images/pic1.jpg">
                 <p className="product">Herbalife Formula</p>
                 <p className="product">₹2000.00</p>
@@ -36,7 +44,7 @@ function Products(){
                 <button className="buy">Buy Now</button>
             </div>
             <div className="col-1">
-                <button className="center">>></button>
+                
             </div>
         </div>
     )
