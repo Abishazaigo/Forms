@@ -9,6 +9,7 @@ import About from './Components/About';
 import Posts from './Components/Posts';
 import View from './Components/View';
 import Comment from './Components/Comment';
+import Products from './Components/Products';
 function App() {
   return (
       <Router>
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Intro />
       <About />
+      <Products />
       <Recent />
       <Footer />
       </Route>
