@@ -4,8 +4,7 @@ import '../Styles/Web.css';
 function View(){
     const [views, setViews] = useState({});
     useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts/1")
+    axios.get("https://jsonplaceholder.typicode.com/posts/1")
       .then((res) => {
         console.log(res.data);
         setViews(res.data);
@@ -16,15 +15,16 @@ function View(){
   }, []);
 
   return(
-    <Views title={views.title} body={views.body}/>
+
+    <Views data={views}/>
   )
 }
 const Views = (props) => {
 
         return (
           <div className="view">
-            <p>Title : {props.title}</p>
-            <p>Content : {props.body}</p>
+            <p>Title : {props.data.title}</p>
+            <p>Content : {props.data.body}</p>
           </div>
         );
 };
