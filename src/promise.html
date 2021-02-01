@@ -1,0 +1,23 @@
+<html>
+	<head>
+	</head>
+	<body>
+	    <script>
+            let promiseA = new Promise((resolve, reject) => {
+                let wait = setTimeout(() => {
+                    resolve('Promise A win!');
+                }, 200)
+            })
+            let promiseB = new Promise((resolve, reject) => {
+                let wait = setTimeout(() => {
+                    resolve('Promise B win!');
+                }, 100)
+            })
+            let race = Promise.race([
+                promiseA,
+                promiseB
+            ])
+            race.then((res) => console.log(res))
+        </script>
+    </body>
+</html>
