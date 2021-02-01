@@ -2,7 +2,6 @@
     height: 100px;
     width: 100px;
 }
-
 .fa-facebook {
     margin-left: 100px;
     color: black;
@@ -17,9 +16,39 @@
     margin-left: 100px;
     color: black;
 }
+@media only screen and (max-width:576px)
+{
+.logo {
+    height: 30px;
+    width: 30px;
+}
+.fa-facebook {
+    margin-left: 10px;
+    color: black;
+}
+
+.fa-youtube {
+    margin-left: 10px;
+    color: black;
+}
+
+.fa-linkedin {
+    margin-left: 10px;
+    color: black;
+}
+}
 
 .foottop{
     background-color: black;
+}
+.comment{
+    color:coral;
+    border:3px solid blueviolet;
+}
+
+.view{
+    color:coral;
+    background-color: cyan;
 }
 
 .icon{
